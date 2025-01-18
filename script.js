@@ -1,3 +1,4 @@
+
 const birthdayDate = new Date(new Date().getFullYear(), 0, 15, 0, 0, 0); 
 
 function updateCountdown() {
@@ -7,12 +8,6 @@ function updateCountdown() {
     if (timeLeft < 0) {
         birthdayDate.setFullYear(birthdayDate.getFullYear() + 1);
         timeLeft = birthdayDate - now;
-    }
-
-    // ถ้า timeLeft เท่ากับ 0 หรือหมดเวลาแล้ว ให้แสดงข้อความ "Happy Birthday!"
-    if (timeLeft <= 0) {
-        document.getElementById("countdown").innerText = "สุขสันต์วันเกิด!";
-        return;  // หยุดการนับถอยหลัง
     }
 
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
